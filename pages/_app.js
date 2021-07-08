@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import App from "next/app";
 import Head from "next/head";
+import { ContextGlobalProvider } from 'components/contexts/ContextGlobal'
 import Router from "next/router";
 
 import PageChange from "components/PageChange/PageChange.js";
@@ -34,11 +35,11 @@ export default class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-
+  
     const Layout = Component.layout || (({ children }) => <>{children}</>);
 
     return (
-      <React.Fragment>
+      <ContextGlobalProvider>
         <Head>
           <link rel="manifest" href="/manifest.json" />
           <meta
@@ -48,10 +49,10 @@ export default class MyApp extends App {
           <title>Escola de Ferias</title>
           {/* <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> */}
         </Head>
-        <Layout>
-          <MeuAppSw Component={<Component {...pageProps} />}/>
-        </Layout>
-      </React.Fragment>
+            <Layout>
+                <MeuAppSw Component={<Component {...pageProps} />}/>
+            </Layout>
+      </ContextGlobalProvider>
     );
   }
 }

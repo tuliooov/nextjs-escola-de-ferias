@@ -1,12 +1,11 @@
 import React, { useContext } from "react";
-import ContextGlobal from 'components/contexts/globalContext'
 
-export default function Number() {
+export default function Number2(props) {
 
     const {
         valor,
-        setValor,
-    } = useContext(ContextGlobal);
+        setValor
+    } = props
 
     return (
         <>
