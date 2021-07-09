@@ -1,11 +1,8 @@
 import React, { useContext } from "react";
 
-export default function Number1(props) {
+export default function Number1() {
 
-    const {
-        valor,
-        setValor
-    } = props
+    const [ valor, setValor ] = useState(0)
 
 
     return (

@@ -21,8 +21,6 @@ export default function Exemplo4() {
     },2500)
   }, []);
 
-  
-
   if(carregando === true){
     return (<h1 style={{textAlign:"center", fontSize: '48px'}}> Caregando... </h1>)
   }

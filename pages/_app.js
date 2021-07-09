@@ -49,9 +49,9 @@ export default class MyApp extends App {
           <title>Escola de Ferias</title>
           {/* <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> */}
         </Head>
-            <Layout>
-                <MeuAppSw Component={<Component {...pageProps} />}/>
-            </Layout>
+        <Layout>
+            <MeuAppSw Component={<Component {...pageProps} />}/>
+        </Layout>
       </ContextGlobalProvider>
     );
   }

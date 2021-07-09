@@ -12,17 +12,6 @@ export default function Index() {
   console.log('Rodei Index')
 
   const [ valor, setValor ] = useState(0)
-  const [ carregando, setCarregando ] = useState(true)
-
-  useEffect(() => {
-    window.setTimeout(function(){
-      setCarregando(false)
-    },2500)
-  }, [])
-
-  if(carregando === true){
-    return (<h1 style={{textAlign:"center", fontSize: '48px'}}> Caregando... </h1>)
-  }
 
   return (
     <>

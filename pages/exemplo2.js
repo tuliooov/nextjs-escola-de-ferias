@@ -8,15 +8,17 @@ import Number2 from 'components/Inicio/Number2'
 import Footer from "components/Footers/Footer.js";
 
 export default function Index() {
-  console.log('Rodei Index')
+  console.log('RODEI EXEMPLO 2')
 
   const [ valor, setValor ] = useState(0)
   const [ carregando, setCarregando ] = useState(true)
 
+
   useEffect(() => {
-    window.setTimeout(function(){
-      setCarregando(false)
-    },2500)
+    //aguardar 2 segundos
+    setTimeout(function(){
+      setCarregando(!carregando)
+    },2000)
   }, [])
 
   if(carregando === true){
